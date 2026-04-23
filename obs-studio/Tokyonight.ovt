@@ -1,0 +1,231 @@
+@OBSThemeMeta {
+    name: 'Tokyonight-Night';
+    id: 'com.obsproject.TokyonightNight';
+    extends: 'com.obsproject.Yami';
+    author: 'Refactored';
+    dark: 'true';
+}
+
+@OBSThemeVars {
+    /* === TOKYONIGHT NIGHT === */
+    --bg: #1a1b26;
+    --bg_dark: #16161e;
+    --bg_highlight: #292e42;
+    --bg_darker: #0f0f14;
+
+    --fg: #c0caf5;
+    --fg_dark: #a9b1d6;
+    --fg_gutter: #3b4261;
+
+    --comment: #565f89;
+
+    --blue: #7aa2f7;
+    --blue_hover: #89ddff;
+    --blue_soft: #3d59a1;
+
+    --cyan: #7dcfff;
+    --green: #9ece6a;
+    --magenta: #bb9af7;
+    --orange: #ff9e64;
+    --yellow: #e0af68;
+    --red: #f7768e;
+
+    --border: var(--bg_highlight);
+
+    /* mapping */
+    --dark: var(--bg);
+    --very_dark: var(--bg_dark);
+    --very_very_dark: var(--bg_darker);
+
+    --accent: var(--blue);
+    --accent_hover: var(--blue_hover);
+}
+
+OBSTheme {
+    window: var(--bg);
+    windowText: var(--fg);
+    base: var(--bg_dark);
+    alternateBase: var(--bg_highlight);
+    text: var(--fg);
+
+    button: var(--accent);
+    buttonText: var(--bg);
+
+    highlight: var(--blue);
+    highlightText: var(--bg);
+
+    link: var(--cyan);
+    linkVisited: var(--magenta);
+}
+
+/* === GLOBAL === */
+
+QWidget {
+    background-color: var(--bg);
+    color: var(--fg);
+    selection-background-color: var(--blue);
+    selection-color: var(--bg);
+}
+
+*[frameShape] {
+    border: 1px solid var(--border);
+    border-radius: 6px;
+}
+
+/* === LIST / TREE === */
+
+QListWidget, QTreeView {
+    border: 1px solid var(--border);
+    border-radius: 6px;
+}
+
+QListWidget::item:selected,
+QTreeView::item:selected {
+    background-color: var(--accent);
+    color: var(--bg);
+}
+
+QListWidget::item:hover,
+QTreeView::item:hover {
+    background-color: var(--accent_hover);
+    color: var(--bg);
+}
+
+/* === BUTTON === */
+
+QPushButton {
+    background-color: var(--accent);
+    color: var(--bg);
+    border-radius: 6px;
+    padding: 6px 12px;
+}
+
+QPushButton:hover {
+    background-color: var(--accent_hover);
+}
+
+QPushButton:pressed {
+    background-color: var(--blue_soft);
+}
+
+/* === INPUT === */
+
+QLineEdit, QTextEdit, QPlainTextEdit {
+    background-color: var(--bg_dark);
+    border-radius: 4px;
+    padding: 4px;
+}
+
+/* === SCROLLBAR === */
+
+QScrollBar:vertical {
+    background: var(--bg_dark);
+    width: 12px;
+}
+
+QScrollBar::handle:vertical {
+    background: var(--accent);
+    border-radius: 6px;
+}
+
+QScrollBar::handle:vertical:hover {
+    background: var(--accent_hover);
+}
+
+/* === SLIDER === */
+
+QSlider::groove:horizontal {
+    background: var(--bg_highlight);
+    height: 4px;
+}
+
+QSlider::sub-page:horizontal {
+    background: var(--accent);
+}
+
+QSlider::handle:horizontal {
+    background: var(--fg);
+    width: 14px;
+    border-radius: 4px;
+}
+
+/* === MENU === */
+
+QMenuBar {
+    background: var(--bg);
+}
+
+QMenuBar::item:selected {
+    background: var(--accent);
+    color: var(--bg);
+}
+
+QMenu {
+    background: var(--bg_dark);
+}
+
+QMenu::item:selected {
+    background: var(--accent);
+    color: var(--bg);
+}
+
+/* === TAB === */
+
+QTabBar::tab {
+    background: var(--bg_dark);
+    padding: 6px;
+    border-radius: 4px;
+}
+
+QTabBar::tab:selected {
+    background: var(--accent);
+    color: var(--bg);
+}
+
+/* === GROUP === */
+
+QGroupBox {
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    margin-top: 10px;
+}
+
+QGroupBox::title {
+    padding: 2px 6px;
+    color: var(--fg_dark);
+}
+
+/* === DOCK === */
+
+QDockWidget {
+    background: var(--bg);
+}
+
+QDockWidget::title {
+    border-bottom: 1px solid var(--border);
+}
+
+/* === TOOLTIP === */
+
+QToolTip {
+    background: var(--bg_dark);
+    color: var(--fg);
+    border: 1px solid var(--border);
+}
+
+/* === STATUS === */
+
+QStatusBar {
+    background: var(--bg);
+}
+
+/* === TABLE === */
+
+QTableView {
+    gridline-color: var(--border);
+}
+
+QHeaderView::section {
+    background: var(--bg_highlight);
+    color: var(--fg);
+}

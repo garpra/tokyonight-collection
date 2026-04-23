@@ -2,44 +2,44 @@
 
 A collection of Tokyo Night Night themed configurations for various applications.
 
-## 🚀 Installation Instructions
+## Installation Instructions
 
 ### 1. Chromium / Google Chrome
+
 This folder contains a custom theme extension.
+
 1. Open Chromium or Google Chrome.
 2. Navigate to `chrome://extensions/`.
 3. Enable **Developer mode** (toggle in the top right corner).
 4. Click **Load unpacked**.
 5. Select the `chromium` folder from this repository.
 
-### 2. Discord (BetterDiscord / Vencord)
-This CSS file is compatible with custom Discord clients like BetterDiscord or Vencord.
-- **BetterDiscord:**
-  1. Open Discord Settings.
-  2. Go to **Themes** under the BetterDiscord section.
-  3. Click **Open Themes Folder**.
-  4. Copy `discord/tokyonight-night.css` into that folder.
-  5. Enable the theme in Discord.
+### 2. Discord (Vencord)
+
+This CSS works with client mods such as Vencord (and may work with others like BetterDiscord).
+
 - **Vencord:**
   1. Open Discord Settings.
-  2. Go to **Themes** under the Vencord section.
-  3. You can either copy-paste the content of `tokyonight-night.css` into the **Custom CSS** box or point to the local file path.
+  2. Go to **Themes** under the **Vencord Setting** section.
+  3. You can either copy-paste the content of `tokyonight-night.css` into the **QuickCSS** or copy into `~/.config/Vencords/themes` folder.
 
-### 3. qBittorrent
-1. Open qBittorrent.
-2. Go to **Tools** > **Options** (or press `Alt+O`).
-3. Select the **Behavior** tab.
-4. Check the box **Use custom UI Theme**.
-5. Click the folder icon and select the `qbittorent/tokyo-night.qbtheme` file.
-6. Restart qBittorrent for the changes to take effect.
+### 3. Qt Applications (KDE / Linux)
 
-### 4. Qt Applications (KDE / Linux)
 The `.colors` file is a color scheme for Qt-based applications, commonly used in KDE Plasma.
-1. Open **System Settings**.
-2. Go to **Appearance** > **Colors**.
-3. Click **Install from File...** (usually at the bottom).
-4. Select `qt-apps/TokyoNightNight.colors`.
-5. Apply the newly added "Tokyo Night Night" scheme.
+
+1. Copy `TokyoNightNight.colors` to `~/.local/share/color-schemes/` folder
+2. Apply the "Tokyo Night Night" theme in Qt Application.
+
+### 4. OBS Studio
+
+This folder contains the `.ovt` theme file for OBS Studio.
+
+1. Copy the `obs-studio/Tokyonight.ovt` file to `~/.config/obs-studio/themes/`.
+2. Open OBS Studio.
+3. Go to **Settings** > **Appearance**.
+4. In the **Style** dropdown, select **Tokyonight-night**.
+5. Click **Apply**.
 
 ---
-*Inspired by the Tokyo Night color palette.*
+
+_Inspired by the Tokyo Night color palette, adapted for consistency across multiple applications._
